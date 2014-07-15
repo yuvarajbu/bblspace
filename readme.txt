@@ -3,7 +3,7 @@ Let the master repo contain the most uptodate working codes.
 The changes can be verified in those branches and the branches can be deleted later.
 
 * When you first start working on the project, you'll want to make a local copy of the repository to keep track of your changes:
-      git clone https://github.com/yuvarajbu/oddsratio.git
+      git clone https://github.com/yuvarajbu/bblspace.git
 
 * Before you begin working, you should create a feature branch based on the development branch:
       git checkout -b somefeature origin / development
