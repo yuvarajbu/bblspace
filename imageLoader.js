@@ -4,11 +4,19 @@ var i;
 
 for(i=1; i<n; i++){
     if(i === 1){
-    var $activediv = $('<div class = "item active"/>').append('<img src=\'../images/Slide'+i+'.JPG\'/>');
+    var $activecaption = $('<div class="carousel-caption"/>').text('Slide'+i);
+    var $activediv = $('<div class = "item active"/>').append('<img src=\'../images/Slide'+i+'.JPG\' width=\'1500\' height=\'999\'/>', $activecaption);
+    var $activepag = $('<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>');
+    
+    $('.carousel-indicators').append($activepag);
     $('.carousel-inner').append($activediv);
     }
   else{
-    var $itemdiv = $('<div class = "item"/>').append('<img src=\'../images/Slide'+i+'.JPG\'/>');
+    var p=i-1;
+    var $activecap = $('<div class="carousel-caption"/>').text('Slide'+i);
+    var $itemdiv = $('<div class = "item"/>').append('<img src=\'../images/Slide'+i+'.JPG\' width=\'1500\' height=\'999\'/>',$activecap);
+    var $pag = $('<li data-target="#carousel-example-generic" data-slide-to="'+p+'"></li>'); 
+    $('.carousel-indicators').append($pag);
     $('.carousel-inner').append($itemdiv);
     }
   }
